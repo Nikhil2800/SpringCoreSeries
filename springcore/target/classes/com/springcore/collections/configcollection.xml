@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+<bean class="com.springcore.collections.Person" name="person">
+<property name="name" value="Nikhil Shinde"/>
+<property name="phones">
+	<list>
+		<value>Nikhil</value>
+		<value>Rohit</value>
+		<value>Nil</value>
+		<value>Nikk</value>
+	</list>
+</property>
+
+<property name="friends">
+	<set>
+		<value>Ghatnandre</value>
+		<value>Sangli</value>
+		<value>KM</value>
+	</set>
+</property>
+
+<property name="courses">
+	<map>
+		<entry key="java" value="55000"/>
+		<entry key="python" value="44000"/>
+		<entry key="c++" value="55000"/>
+	</map>
+</property>
+
+<property name="properties">
+	<props>
+		<prop key="name">Nikhil Shinde</prop>
+		<prop key="age">24</prop>
+		<prop key="street">Ghatnandre</prop>
+		<prop key="Num">9595256255</prop>
+	</props>
+</property>
+</bean>
+
+</beans>

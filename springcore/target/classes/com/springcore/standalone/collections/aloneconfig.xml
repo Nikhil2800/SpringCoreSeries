@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+<!-- Standalone Function -->
+
+<util:list list-class="java.util.LinkedList" id="Nikhil">
+	<value>Nikhil</value>
+	<value>Rohit</value>
+	<value>Nikk</value>
+</util:list>
+
+<util:set set-class="java.util.HashSet" id="Nikhil1">
+	<value>Ghatnandre</value>
+	<value>Sangli</value>
+	<value>KM</value>
+</util:set>
+
+<util:map map-class="java.util.HashMap" id="Nikhil2">
+	<entry key="java" value="50000"/>
+	<entry key="python" value="550000"/>
+	<entry key="c++" value="44000"/>
+</util:map>
+
+<util:properties id="Nikhil3">
+	<prop key="name">Nikhil Shinde</prop>
+	<prop key="age">24</prop>
+	<prop key="street">Ghatnandre</prop>
+</util:properties>
+
+
+
+<bean class="com.springcore.standalone.collections.Person" name="person">
+<property name="name" value="Nikhil Shinde"/>
+<property name="phones" ref="Nikhil"/>
+<property name="friends" ref="Nikhil1"/>
+<property name="courses" ref="Nikhil2"/>
+<property name="properties" ref="Nikhil3"/>
+</bean>
+
+</beans> 
